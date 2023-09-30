@@ -7,7 +7,14 @@ import java.util.stream.Collectors;
  */
 public class Main {
 
+   public static int testCounter = 0;
+
    public static Map<Integer, Integer> count(int[][] chessBoard) {
+      // Debugging
+      ++testCounter;
+      System.out.println("Test number:" + testCounter);
+      System.out.println("With field count: " + chessBoard.length);
+
       HashMap<Integer, Integer> countEmptyFields = new HashMap<Integer, Integer>();
 
       for (int i = 0; i < chessBoard.length; i++) {
