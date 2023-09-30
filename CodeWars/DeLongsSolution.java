@@ -4,8 +4,10 @@ import java.util.stream.Collectors;
 
 /**
  * Solving this https://www.codewars.com/kata/5bc6f9110ca59325c1000254/java
+ * 
+ * Status: In progress...
  */
-public class Main {
+public class DeLongsSolution {
 
    public static int testCounter = 0;
 
