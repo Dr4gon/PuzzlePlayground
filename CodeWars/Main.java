@@ -7,14 +7,7 @@ import java.util.stream.Collectors;
  */
 public class Main {
 
-   public static int testCounter = 0;
-
    public static Map<Integer, Integer> count(int[][] chessBoard) {
-      // Debugging
-      ++testCounter;
-      System.out.println("Test number:" + testCounter);
-      System.out.println("With field count: " + chessBoard.length);
-
       HashMap<Integer, Integer> countEmptyFields = new HashMap<Integer, Integer>();
 
       for (int i = 0; i < chessBoard.length; i++) {
@@ -31,8 +24,8 @@ public class Main {
          }
       }
 
-      // Reverse order by using keys as attribute and putting the value/key pair back
-      // in reverse
+      // Reverse order by using keys as attribute and
+      // putting the value/key pair back in reverse
       HashMap<Integer, Integer> countEmptyFieldsReversed = countEmptyFields.entrySet().stream()
             .sorted(Map.Entry.<Integer, Integer>comparingByValue().reversed())
             .collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey, (e1, e2) -> e1, HashMap::new));
